@@ -1,0 +1,54 @@
+.background {
+     -fx-background-color: linear-gradient(rgb(224,228,233) 0%, derive(rgb(224,228,233),-20%) 100%);
+     -fx-background-image: url("../img/noisy.png");
+     -fx-background-repeat: repeat;
+}
+
+.label {
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #4A7078);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#61a2b1, #61a2b1);
+}
+
+#fqcn {
+   -fx-font-size: 24px;
+   -fx-font-family: "Arial Black";
+   -fx-Text-fill: #1111ff;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.prompt_text {
+    -fx-Text-fill: #7c7c7c;
+    -fx-font-size: 35px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+.fqcn-background {
+     -fx-background-color: linear-gradient(rgb(100,100,255) 0%, derive(rgb(100,100,255),0%) 100%);
+     -fx-background-image: url("../img/noisy.png");
+     -fx-background-repeat: repeat;
+}
+
+.badge {
+    -fx-background-color: rgba(100, 100, 255, 0.7);
+    -fx-background-radius: 15 15 15 15;
+    -fx-Text-fill: #fcfcfc;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}

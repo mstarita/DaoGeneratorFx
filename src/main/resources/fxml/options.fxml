@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thecat.tools.dao.fx.OptionsController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnBack" mnemonicParsing="false" onAction="#onBack" text="%btn.back" />
+                  <Button fx:id="btnGenerate" mnemonicParsing="false" onAction="#onGenerate" text="%btn.generate-code" />
+                  <Button fx:id="btnOpenOutputFolder" mnemonicParsing="false" onAction="#onOpenOutputFolder" text="%btn.open-output-folder" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane hgap="5.0" vgap="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="175.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="10.0" prefWidth="400.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="%lbl.key-field" />
+                        <Label text="%lbl.output-package" GridPane.rowIndex="1" />
+                        <Label text="%lbl.verbose" GridPane.rowIndex="2" />
+                        <Label text="%lbl.dao-base-classes" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtOutputPackage" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="cbVerbose" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="cbGenerateDaoBaseClasses" disable="true" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1">
+                           <children>
+                              <ComboBox fx:id="cbKeyField" editable="false" prefWidth="150.0" />
+                              <Label fx:id="lblFieldCount" alignment="CENTER" prefWidth="30.0" styleClass="badge" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <StackPane>
+                     <children>
+                        <Label styleClass="prompt_text" text="%lbl.dao-generator-output" />
+                        <TextArea fx:id="txtOutput" editable="false" opacity="0.85" />
+                     </children>
+                  </StackPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <top>
+             <StackPane styleClass="fqcn-background">
+                 <children>
+                    <Label fx:id="fqcn" text="FQ Class Name" BorderPane.alignment="CENTER" />
+                 </children>
+             </StackPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>
